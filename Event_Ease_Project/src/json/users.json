@@ -1,0 +1,9 @@
+
+[
+    {
+        "id": "johnyDoe",
+        "password": "1234",
+        "email": "john.doe@example.com",
+        "tlf_number" : 678984536 
+    }
+]
