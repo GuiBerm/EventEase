@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+
+	<display-name>Template</display-name>
+	<description>
+		An empty project to use as a template for your own ones
+	</description>
+
+	<!-- Context attributes to be used throughout the application -->
+	<context-param>
+		<param-name>dao</param-name>
+		<param-value>IDENTIFICATIVO_DELL_IMPLEMENTAZIONE</param-value>
+	</context-param>
+
+	<!-- Define servlets that are included in the application -->
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>servlet.Broker</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>User</servlet-name>
+		<servlet-class>servlet.UserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>User</servlet-name>
+		<url-pattern>/User</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>Admin</servlet-name>
+		<servlet-class>servlet.AdminServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Admin</servlet-name>
+		<url-pattern>/Admin</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>CreateEvent</servlet-name>
+		<servlet-class>servlet.CreateEvent</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreateEvent</servlet-name>
+		<url-pattern>/CreateEvent</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>SellTicket</servlet-name>
+		<servlet-class>servlet.SellTicketServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SellTicket</servlet-name>
+		<url-pattern>/SellTicket</url-pattern>
+	</servlet-mapping>
+	<!-- Welcome pages -->
+	<!-- pleonastico: tomcat "tenta" in automatico le index.html e index.jsp -->
+
+	<welcome-file-list>
+		<welcome-file>home.html</welcome-file>
+	</welcome-file-list>
+
+	<!-- Handle exceptions and errors -->
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/errors/notfound.html</location>
+	</error-page>
+
+	<error-page>
+		<exception-type>javax.servlet.ServletException</exception-type>
+		<location>/errors/failure.jsp</location>
+	</error-page>
+
+</web-app>

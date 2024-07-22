@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="-1"/>
+    <title>Validazione di form sul browser</title>
+    <script type="text/javascript" src="scripts/login.js"></script>
+    <link rel="stylesheet" href="styles/default.css" type="text/css"/>
+</head>
+<body>
+    <h1>EventEase</h1>
+    <p>Insert here your credentials of access</p>
+    <form id="form" action="Login" method="post">
+        <table>
+            <tr>
+                <td>Profile type:</td>
+                <td>
+                    <select name="profileType">
+                            <option value="">Select a profile type </option>
+                            <option value="user">User</option>
+                            <option value="admin">Admin</option>
+                   </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Profile id:</td>
+                <td><input type="text" id="id" name="id"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" id="password" name="password"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button id="submit" onclick="myFunction()">Submit </button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
